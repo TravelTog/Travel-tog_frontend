@@ -10,10 +10,10 @@ export default function MainPage() {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        width: '100%'
       }}
     >
-      <Button textLeft={1} textRight={2}/>
-      {/* <Text>Travel tog</Text> */}
+      <Button value="Войти" />
     </View>
   );
 }
