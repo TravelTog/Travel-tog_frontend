@@ -1,15 +1,28 @@
-import { View, TouchableOpacity, Text, StyleSheet } from "react-native";
-import { COLORS } from "../../assets/colors";
+import React from "react";
+import { TouchableOpacity, Text, StyleSheet, Dimensions } from "react-native";
+import { COLORS } from "../../assets/variables";
 
-const Button = ({ value }) => {
+const { width } = Dimensions.get("window");
+
+const Button = ({ text }) => {
+    const getFontSize = () => {
+        if (width < 360) {
+            return 14;
+        } else if (width < 768) {
+            return 16;
+        } else {
+            return 18;
+        }
+    };
+
     return (
         <TouchableOpacity
             style={styles.button}
         >
             <Text
-                style={styles.buttonText}
+                style={[styles.buttonText, { fontSize: getFontSize() }]}
             >
-                {value}
+                {text}
             </Text>
         </TouchableOpacity>
     )
@@ -24,8 +37,8 @@ const styles = StyleSheet.create({
     },
 
     buttonText: {
+        fontFamily: 'SF-Pro-Display-Semibold',
         fontWeight: 500,
-        fontSize: 16,
         lineHeight: '125%',
         color: COLORS.white,
         textAlign: 'center'

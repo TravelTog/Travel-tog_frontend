@@ -1,7 +1,8 @@
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import React from 'react'
 
-import Button from "../components/ui/Button"
+import Button from "../components/ui/Button";
+import Input from "../components/ui/Input";
 
 export default function MainPage() {
   return (
@@ -13,7 +14,13 @@ export default function MainPage() {
         width: '100%'
       }}
     >
-      <Button value="Войти" />
+      <Button text="Войти" />
+      <Input
+        placeholder="Enter your password"
+        isPassword={true}
+        keyboardType="default"
+        icon={Input}
+      />
     </View>
   );
 }
