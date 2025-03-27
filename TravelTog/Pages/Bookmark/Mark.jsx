@@ -1,10 +1,10 @@
 import { React } from "react";
 import {Text} from 'react-native';
 
-const Register = () => {
+const Mark = () => {
    return(
-      <Text> Register </Text>
+      <Text> Mark </Text>
    )
 }
 
-export default Register;
+export default Mark;
