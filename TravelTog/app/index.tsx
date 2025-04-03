@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import MainPage from '../Pages/MainPage';
+import Tabs from '../Rout/Tab';
 import React from "react";
 
 export default function Index() {
@@ -11,7 +11,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <MainPage />
+      <Tabs />
     </View>
   );
 }
